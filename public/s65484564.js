@@ -2,7 +2,7 @@ async function login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    const response = await fetch("/login", {
+    const response = await fetch("/login.html", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password })
@@ -16,4 +16,5 @@ async function login() {
     } else {
         document.getElementById("msg").textContent = data.message;
     }
+
 }
